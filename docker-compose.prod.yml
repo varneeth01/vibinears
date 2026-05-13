@@ -1,0 +1,48 @@
+name: vibinears-prod
+
+services:
+  api:
+    image: ghcr.io/YOUR_GITHUB_USERNAME/vibinears-api:latest
+    container_name: vibinears-api
+    restart: always
+    env_file:
+      - .env.production
+    expose:
+      - "8000"
+    networks:
+      - vibinears
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  web:
+    image: ghcr.io/YOUR_GITHUB_USERNAME/vibinears-web:latest
+    container_name: vibinears-web
+    restart: always
+    env_file:
+      - .env.production
+    expose:
+      - "3000"
+    networks:
+      - vibinears
+
+  nginx:
+    build:
+      context: .
+      dockerfile: infra/docker/nginx.Dockerfile
+    container_name: vibinears-nginx
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - api
+      - web
+    networks:
+      - vibinears
+
+networks:
+  vibinears:
+    driver: bridge

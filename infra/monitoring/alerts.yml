@@ -1,0 +1,11 @@
+groups:
+  - name: vibinears-api-alerts
+    rules:
+      - alert: VibinEarsAPIDown
+        expr: up{job="vibinears-api"} == 0
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "VibinEars API is down"
+          description: "The VibinEars API has been unreachable for more than 2 minutes."
