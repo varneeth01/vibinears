@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "allowJs": false,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@vibinears/ui": ["packages/ui/src"],
+      "@vibinears/types": ["packages/types/src"],
+      "@vibinears/api-client": ["packages/api-client/src"],
+      "@vibinears/validators": ["packages/validators/src"],
+      "@vibinears/constants": ["packages/constants/src"],
+      "@vibinears/config": ["packages/config/src"],
+      "@vibinears/logger": ["packages/logger/src"]
+    }
+  }
+}

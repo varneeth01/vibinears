@@ -1,0 +1,22 @@
+{
+  "name": "mobile-security",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "expo start",
+    "build": "mkdir -p dist && echo \"mobile-security native build not configured yet\" > dist/.build",
+    "lint": "echo \"No lint configured for mobile-security\"",
+    "test": "echo \"No tests configured for mobile-security\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@vibinears/types": "workspace:*",
+    "expo": "^52.0.0",
+    "react": "^18.3.1",
+    "react-native": "^0.76.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "typescript": "^5.6.3"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "mobile-customer",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "expo start",
+    "build": "mkdir -p dist && echo \"mobile-customer native build not configured yet\" > dist/.build",
+    "lint": "echo \"No lint configured for mobile-customer\"",
+    "test": "echo \"No tests configured for mobile-customer\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@vibinears/types": "workspace:*",
+    "expo": "^52.0.0",
+    "react": "^18.3.1",
+    "react-native": "^0.76.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "typescript": "^5.6.3"
+  }
+}

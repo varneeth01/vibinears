@@ -1,0 +1,39 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@vibinears/ui": [
+        "../../packages/ui/src"
+      ],
+      "@vibinears/types": [
+        "../../packages/types/src"
+      ],
+      "@vibinears/api-client": [
+        "../../packages/api-client/src"
+      ],
+      "@vibinears/constants": [
+        "../../packages/constants/src"
+      ]
+    },
+    "incremental": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
