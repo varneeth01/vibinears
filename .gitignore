@@ -13,7 +13,6 @@
 !.env.staging.example
 !.env.production.example
 
-# Local env managers
 .envrc
 .direnv/
 
@@ -47,35 +46,32 @@ firebase-service-account*.json
 google-services.json
 GoogleService-Info.plist
 
-# Cloud credentials
 .aws/
 .gcloud/
 .azure/
-doctl/
 kubeconfig
 *.kubeconfig
 
 # ---------------------------------------------------------
-# Node / JavaScript / TypeScript
+# Node / JS / TS / PNPM / Turbo
 # ---------------------------------------------------------
 node_modules/
 .pnpm-store/
 .npm/
+.yarn/
 .yarn/cache/
 .yarn/unplugged/
 .yarn/build-state.yml
 .yarn/install-state.gz
 
-dist/
-build/
-.next/
-out/
-.vercel/
-.netlify/
 .turbo/
 .cache/
 .parcel-cache/
 
+.next/
+out/
+dist/
+build/
 coverage/
 .nyc_output/
 *.tsbuildinfo
@@ -84,6 +80,16 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
+# Keep package manifests and lockfiles
+!package.json
+!pnpm-lock.yaml
+!pnpm-workspace.yaml
+!turbo.json
+!tsconfig.base.json
+!packages/**/package.json
+!apps/**/package.json
+!services/**/package.json
 
 # ---------------------------------------------------------
 # Python
@@ -115,7 +121,7 @@ htmlcov/
 wheels/
 
 # ---------------------------------------------------------
-# FastAPI / backend runtime files
+# Backend runtime files
 # ---------------------------------------------------------
 logs/
 *.log
@@ -149,7 +155,6 @@ mongodb-data/
 redis-data/
 minio-data/
 
-# Docker named-volume folders if ever mounted locally
 data/
 .local-data/
 
@@ -160,7 +165,6 @@ data/
 docker-data/
 docker-compose.override.yml
 
-# Keep actual compose files
 !docker-compose.yml
 !docker-compose.dev.yml
 !docker-compose.prod.yml
@@ -211,7 +215,6 @@ ios/DerivedData/
 *.xcuserstate
 *.xcuserdata/
 
-# Mobile signing
 android/key.properties
 android/*.keystore
 android/app/*.keystore
@@ -237,7 +240,6 @@ mlruns/
 *.joblib
 *.ckpt
 
-# User/private audio data
 *.wav
 *.mp3
 *.m4a
