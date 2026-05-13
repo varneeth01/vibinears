@@ -1,0 +1,216 @@
+# =========================
+# VibinEars Secure Gitignore
+# =========================
+
+# Environment files - NEVER COMMIT REAL SECRETS
+.env
+.env.*
+!.env.example
+!.env.development.example
+!.env.staging.example
+!.env.production.example
+
+# Secrets / credentials
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.mobileprovision
+*.provisionprofile
+*.asc
+*.gpg
+secrets/
+.secrets/
+credentials/
+*.credentials
+service-account*.json
+firebase-service-account*.json
+google-services.json
+GoogleService-Info.plist
+
+# API keys / local config
+config.local.*
+settings.local.*
+*.local
+*.secret
+*.secrets
+.envrc
+.direnv/
+
+# Node / JS / TS
+node_modules/
+.pnpm-store/
+.npm/
+.yarn/
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+dist/
+build/
+.next/
+out/
+.vercel/
+.netlify/
+.turbo/
+coverage/
+.nyc_output/
+*.tsbuildinfo
+
+# React Native / Expo
+.expo/
+.expo-shared/
+android/app/build/
+android/build/
+ios/build/
+ios/Pods/
+ios/Podfile.lock
+*.xcworkspace/
+*.xcuserstate
+DerivedData/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+pip-wheel-metadata/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.ipynb_checkpoints/
+
+# FastAPI / logs
+logs/
+*.log
+uvicorn.log
+gunicorn.log
+celerybeat-schedule
+celerybeat.pid
+
+# Databases / local storage
+*.db
+*.sqlite
+*.sqlite3
+dump.rdb
+*.rdb
+*.sql.gz
+*.dump
+postgres-data/
+mongodb-data/
+redis-data/
+minio-data/
+storage/
+uploads/
+media/
+tmp/
+temp/
+
+# ML / AI model artifacts
+models/
+checkpoints/
+runs/
+wandb/
+mlruns/
+*.pt
+*.pth
+*.onnx
+*.engine
+*.tflite
+*.h5
+*.pkl
+*.joblib
+*.ckpt
+
+# Audio / user data
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.aac
+audio_samples/private/
+recordings/
+transcripts/private/
+
+# Docker
+.docker/
+docker-data/
+docker-compose.override.yml
+
+# Terraform
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.*
+*.tfvars
+*.tfvars.json
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Kubernetes / Helm secrets
+kubeconfig
+*.kubeconfig
+k8s-secrets/
+helm-secrets/
+*.sealedsecret.yaml
+*.secret.yaml
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# OS generated
+ehthumbs.db
+Desktop.ini
+
+# Test reports
+test-results/
+playwright-report/
+cypress/videos/
+cypress/screenshots/
+
+# Package manager logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Mobile signing
+android/key.properties
+android/*.keystore
+android/app/*.keystore
+ios/*.p8
+ios/*.cer
+
+# Backups
+*.bak
+*.backup
+*.old
+*.orig
+
+# Local scripts output
+scripts/output/
+reports/generated/
+exports/generated/
+
+# Keep folder placeholders
+!.gitkeep
